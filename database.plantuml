@@ -1,0 +1,43 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Comment {
+   content: text
+   createdAt: datetime
+   updatedAt: datetime
+   userId: text
+   postId: text
+   id: text
+}
+class Post {
+   title: text
+   content: text
+   createdAt: datetime
+   updatedAt: datetime
+   userId: text
+   id: text
+}
+class Reaction {
+   createdAt: datetime
+   updatedAt: datetime
+   isLike: boolean
+   userId: text
+   postId: text
+   id: text
+}
+class User {
+   email: text
+   createdAt: datetime
+   updatedAt: datetime
+   id: text
+}
+
+Comment   -[#595959,plain]-^  Post     : "postId:id"
+Comment   -[#595959,plain]-^  User     : "userId:id"
+Post      -[#595959,plain]-^  User     : "userId:id"
+Reaction  -[#595959,plain]-^  Post     : "postId:id"
+Reaction  -[#595959,plain]-^  User     : "userId:id"
+@enduml

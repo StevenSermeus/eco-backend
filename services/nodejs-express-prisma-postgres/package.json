@@ -1,8 +1,7 @@
 {
-	"name": "bun-express-prisma-postgres",
+	"name": "nodejs-express-prisma-postgres",
 	"module": "index.ts",
 	"scripts": {
-		"dev": "nodemon --watch src --exec ts-node src/index.ts",
 		"build": "tsc",
 		"start": "node dist/index.js"
 	},

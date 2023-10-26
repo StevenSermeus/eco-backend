@@ -37,10 +37,10 @@ For each language and framework, we will test the following variations:
 - All round: 50% read, 50% write
 
   - A user create an account
-  - This user create some posts 100
-  - This user read some posts 100
-  - This user like some posts 50
-  - This user comment some posts 50 (10 comments per post)
+  - This user create some posts 10
+  - This user read some posts 10
+  - This user like some posts 5
+  - This user comment some posts 10 (2 comments per post)
   - This user read some posts comments 50
 
 - Read heavy: 90% read, 10% write

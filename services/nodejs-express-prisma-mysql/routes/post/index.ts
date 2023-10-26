@@ -50,4 +50,15 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/count", async (req, res) => {
+    try {
+        const count = await prisma.post.count();
+        res.status(200).json(count);
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Something went wrong" });
+    }
+});
+
 export default router;

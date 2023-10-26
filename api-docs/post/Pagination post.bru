@@ -1,0 +1,16 @@
+meta {
+  name: Pagination post
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{base_url}}/api/post?start=0&limit=15
+  body: none
+  auth: none
+}
+
+query {
+  start: 0
+  limit: 15
+}

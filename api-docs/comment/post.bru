@@ -1,0 +1,19 @@
+meta {
+  name: post
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{base_url}}/api/comment
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "{{user_id}}",
+    "postId" : "{{post_id}}",
+    "content" : "Un commentaire constructif"
+  }
+}

@@ -6,6 +6,16 @@ meta {
 
 post {
   url: http://{{base_url}}/api/user
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "email":"test3@gmail.com"
+  }
+}
+
+vars:post-response {
+  user_id: res.body.id
 }

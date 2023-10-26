@@ -10,7 +10,6 @@ The database is a PostgreSQL or Mysql database. The goal is to compare the perfo
 
 - Python - Django - django-orm
 - Node.js - Express - prisma
-<!-- - Bun - Express - prisma -->
 - PHP - Laravel - Eloquent
 - Java - Spring - Hibernate
 - go - gorm

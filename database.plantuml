@@ -1,4 +1,4 @@
-@startuml
+@startuml eco-backend
 
 !theme plain
 top to bottom direction
@@ -6,8 +6,8 @@ skinparam linetype ortho
 
 class Comment {
    content: text
-   createdAt: datetime
-   updatedAt: datetime
+   createdAt: timestamp(3)
+   updatedAt: timestamp(3)
    userId: text
    postId: text
    id: text
@@ -15,23 +15,22 @@ class Comment {
 class Post {
    title: text
    content: text
-   createdAt: datetime
-   updatedAt: datetime
+   createdAt: timestamp(3)
+   updatedAt: timestamp(3)
    userId: text
    id: text
 }
 class Reaction {
-   createdAt: datetime
-   updatedAt: datetime
+   createdAt: timestamp(3)
+   updatedAt: timestamp(3)
    isLike: boolean
    userId: text
    postId: text
-   id: text
 }
 class User {
    email: text
-   createdAt: datetime
-   updatedAt: datetime
+   createdAt: timestamp(3)
+   updatedAt: timestamp(3)
    id: text
 }
 

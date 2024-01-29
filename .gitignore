@@ -1,8 +1,15 @@
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
+# python
+
+.venv
+__pycache__/
+
 # volumes folder
 
 *-data
+postgres-data
+mysql-data
 
 # prisma
 

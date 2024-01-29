@@ -4,4 +4,4 @@ WORKDIR /runner
 
 COPY . .
 
-CMD ["k6", "run"]
+ENTRYPOINT ["k6", "run"]

@@ -8,13 +8,15 @@ The database is a PostgreSQL or Mysql database. The goal is to compare the perfo
 
 ## Language and Framework
 
+For the moment, we will test the following languages and frameworks but later, I would like to also test without ORM. So that we can compare the performance of the ORM.
+
 - Python - Django - django-orm
 - Node.js - Express - prisma
-- PHP - Laravel - Eloquent
+- PHP - Laravel - Eloquent (Not now)
 - Java - Spring - Hibernate
 - go - gorm
-- C# - .NET Core - nttframework
-- Rust - Actix - diesel
+- C# - .NET Core - nttframework (Not now)
+- Rust - Actix - diesel (Not now)
 
 ## Data to be measured
 
@@ -29,33 +31,5 @@ The database is a PostgreSQL or Mysql database. The goal is to compare the perfo
 For each language and framework, we will test the following variations:
 
 - Database used
-- Scenario (All round, read heavy, write heavy)
+- Scenario (50/50, read heavy, write heavy)
 - OS if time permits
-
-## Scenario
-
-- All round: 50% read, 50% write
-
-  - A user create an account
-  - This user create some posts 10
-  - This user read some posts 10
-  - This user like some posts 5
-  - This user comment some posts 10 (2 comments per post)
-  - This user read some posts comments 50
-
-- Read heavy: 90% read, 10% write
-
-  - User create an account
-  - User read some posts 100
-  - User read some posts comments 50
-  - User like some posts 25
-  - User read some posts 100
-
-- Write heavy: 10% read, 90% write
-  - User create an account
-  - User create some posts 100
-  - User comment some posts 50 (10 comments per post)
-  - User like some posts 50
-  - User create some posts 100
-  - User comment some posts 50 (10 comments per post)
-  - User like some posts 50

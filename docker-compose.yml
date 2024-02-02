@@ -1,19 +1,19 @@
 version: "3.9"
 
 services:
-  activity:
-    container_name: activity
-    platform: linux/amd64
-    image: jdrouet/docker-activity:canary
-    build: ./docker-activity
-    command: file --format csv /data/output.csv
-    volumes:
-      # - /sys/class/powercap:/sys/class/powercap:ro
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./result:/data
-    depends_on:
-      - postgres
-      - mysql
+  # activity:
+  #   container_name: activity
+  #   platform: linux/amd64
+  #   image: jdrouet/docker-activity:canary
+  #   build: ./docker-activity
+  #   command: file --format csv /data/output.csv
+  #   volumes:
+  #     # - /sys/class/powercap:/sys/class/powercap:ro
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - ./result:/data
+  #   depends_on:
+  #     - postgres
+  #     - mysql
   postgres:
     container_name: postgres
     image: postgres:15-alpine

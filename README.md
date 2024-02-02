@@ -33,3 +33,5 @@ For each language and framework, we will test the following variations:
 - Database used
 - Scenario (50/50, read heavy, write heavy)
 - OS if time permits
+
+## API routes
